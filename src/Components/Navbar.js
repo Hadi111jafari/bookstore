@@ -10,7 +10,7 @@ const NavBar = () => (
         </Link>
       </li>
       <li>
-        <Link to="/Categories" className="link">
+        <Link to="/Catagories" className="link">
           CATEGORIES
         </Link>
       </li>
