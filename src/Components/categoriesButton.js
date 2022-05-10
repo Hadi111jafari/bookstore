@@ -1,3 +1,3 @@
-const CategoriesButton = () => <button type="button">Check status</button>;
+const CategoryButton = () => <button type="button">Check status</button>;
 
-export default CategoriesButton;
+export default CategoryButton;

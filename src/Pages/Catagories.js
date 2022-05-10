@@ -1,5 +1,7 @@
-import categoriesButton from "../components/categoriesButton";
+import categoryButton from '../components/categoriesButton';
 
-const Catagories = () => <categoriesButton />;
+const Categories = () => {
+  <categoryButton />;
+};
 
-export default Catagories;
+export default Categories;
