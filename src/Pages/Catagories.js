@@ -1,3 +1,7 @@
-const Catagories = () => <button type="button">Check status</button>;
+import categoryButton from '../components/categoriesButton';
 
-export default Catagories;
+const Categories = () => {
+  <categoryButton />;
+};
+
+export default Categories;
