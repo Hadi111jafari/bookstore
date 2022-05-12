@@ -2,15 +2,15 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => (
   <div className="navContainer">
-    <h2 className="appName">Bookstore CMS</h2>
+    <h1 className="appName">Bookstore CMS</h1>
     <ul className="nav">
       <li>
-        <Link to="/" className="link">
+        <Link to="/books" className="link">
           BOOKS
         </Link>
       </li>
       <li>
-        <Link to="/Catagories" className="link">
+        <Link to="/categories" className="link">
           CATEGORIES
         </Link>
       </li>

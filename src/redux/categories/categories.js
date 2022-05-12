@@ -1,13 +1,14 @@
-export const categoriesCreator = {
-  type: 'CHECKING_STATUS',
-};
+const STATUS = 'bookstore/categories/STATUS';
 
-const categoriesReducer = (intialState = [], action) => {
+export const categoriesCreator = () => ({
+  type: STATUS,
+});
+
+export const categoriesReducer = (state = [], action) => {
   switch (action.type) {
-    case 'CHECKING_STATUS':
+    case STATUS:
       return 'Under Construction';
     default:
-      return intialState;
+      return state;
   }
 };
-export default categoriesReducer();

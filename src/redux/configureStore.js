@@ -1,10 +1,15 @@
-import { configureStore, combineReducers } from 'redux';
-import categoriesReducer, { categoriesCreator } from './categories/categories';
-import booksReducer, { addActionCreator, removeActionCreator } from './books/books';
+import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers } from 'redux';
+import { categoriesReducer } from './categories/categories';
+import { booksReducer } from './books/books';
 
-const rootReducer = combineReducers({ books: booksReducer, categories: categoriesReducer });
+const rootReducer = combineReducers({
+  books: booksReducer,
+  categories: categoriesReducer,
+});
 
-const store = configureStore(rootReducer);
-store.dispatch(categoriesCreator());
-store.dispatch(addActionCreator());
-store.dispatch(removeActionCreator());
+const store = configureStore({
+  reducer: rootReducer,
+});
+
+export default store;
