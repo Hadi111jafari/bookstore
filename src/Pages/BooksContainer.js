@@ -12,11 +12,11 @@ const BooksContainer = () => {
   ];
 
   return (
-    <div className="books">
+    <div className="container">
       <div className="bookList">
-        <h2>Books Section</h2>
         <BookList books={books} />
       </div>
+      <hr />
       <AddBook />
     </div>
   );

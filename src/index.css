@@ -1,27 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:thin,extra-light,light,100,200,300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Roboto:thin,extra-light,light,100,200,300,400,500,600,700,800');
+
+* {
+  font-family: Montserrat, Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  background-color: #fafafa;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navContainer {
+  height: 5.938rem;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-bottom: 2rem;
+  background-color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: baseline;
+  gap: 3rem;
+}
+
+.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-items: baseline;
+  gap: 2rem;
+}
+
+li {
+  text-decoration: none;
+}
+
+h1 {
+  color: #0290ff;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+}
+
+.link,
+link:active {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.5;
+  text-decoration: none;
+  font-size: 0.913rem;
+  letter-spacing: 1.9px;
+}
+
+.link:hover {
+  opacity: 1;
+}
+
+.activeLink {
+  opacity: 1;
+  color: #121212;
+}
+
+.oval {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 75px;
+  border: solid 1px #e8e8e8;
+}
+
+.icon {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: #0290ff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
+}
+
+.bookList-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+hr {
+  margin: 1rem 0;
+  border: solid 1px #e8e8e8;
+}
+
+.bookItem {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 2rem;
+  list-style-type: none;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35%;
+}
+
+.bookCategory {
+  opacity: 0.5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.bookTitle {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  font-size: 1.25rem;
+  margin: -1rem 0;
+}
+
+.bookAuthor {
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.button-outline {
+  font-family: 'Roboto', sans-serif;
+  color: #4386bf;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-outline:nth-child(2) {
+  padding: 0 1.5rem;
+  border-left: solid 1px #e8e8e8;
+  border-right: solid 1px #e8e8e8;
+}
+
+.button-outline:hover {
+  opacity: 0.7;
+}
+
+.button-outline:active {
+  opacity: 1;
+}
+
+.progress-container {
+  display: flex;
+}
+
+.circular-progress-container {
+  margin: 5px 0;
+  width: 150px;
+  height: 150px;
+  background: #fafafa;
+  border-radius: 50%;
+  border: 1px solid #fafafa;
+  transform: scale(0.6);
+}
+
+.mask .fill {
+  clip: rect(0, 75px, 150px, 0);
+  background-color: #227ded;
+}
+
+.mask.full,
+.circular-progress .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+}
+
+.circular-progress-container .circular-progress .mask,
+.circular-progress-container .circular-progress .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circular-progress-container .circular-progress .mask {
+  clip: rect(0, 150px, 150px, 75px);
+}
+
+.circular-progress-container .inside-circle {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: #fff;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 14px;
+  color: #1e51dc;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+.progress-state {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.percentage {
+  margin-bottom: -1rem;
+  font-size: 2rem;
+}
+
+.completed {
+  opacity: 0.5;
+  font-size: 0.875rem;
+}
+
+.progress-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.currentChapter {
+  opacity: 0.5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+}
+
+.chapter {
+  margin-top: -0.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.updateProgress-Btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  border: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h2 {
+  color: #888;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 5rem;
+}
+
+.input {
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+}
+
+#title {
+  width: 50%;
+}
+
+#author {
+  width: 25%;
+}
+
+.submit-Btn {
+  width: 15%;
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: #0290ff;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.check-btn {
+  width: 10%;
 }
