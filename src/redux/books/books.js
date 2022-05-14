@@ -13,6 +13,7 @@ const getBooks = () => async (dispatch) => {
     id: bookId,
     title: book.title,
     author: book.author,
+    category: book.category,
   }));
   dispatch({
     type: GET_BOOKS,

@@ -14,6 +14,7 @@ const AddBook = () => {
       id: uuidv4(),
       title: fTitle,
       author: fAuthor,
+      category: 'General',
     };
 
     if (fTitle.trim() && fAuthor.trim()) {
@@ -28,21 +29,28 @@ const AddBook = () => {
 
   return (
     <form onSubmit={handleSubmit} className="form-container">
-      <input
-        type="text"
-        className="input"
-        placeholder="Book Title"
-        name="title"
-      />
-      <input
-        type="text"
-        className="input"
-        placeholder="Author"
-        name="author"
-      />
-      <button className="submit-Btn" type="submit">
-        ADD BOOK
-      </button>
+      <h2>ADD NEW BOOK</h2>
+      <div className="input-container">
+        <input
+          type="text"
+          className="input"
+          placeholder="Book Title"
+          name="title"
+          id="title"
+          required
+        />
+        <input
+          type="text"
+          className="input"
+          placeholder="Author"
+          name="author"
+          id="author"
+          required
+        />
+        <button className="submit-Btn" type="submit">
+          ADD BOOK
+        </button>
+      </div>
     </form>
   );
 };
