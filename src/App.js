@@ -1,21 +1,19 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './Pages/Home';
-import Catagories from './Pages/Catagories';
-import Error from './Pages/Error';
-import NavBar from './Components/Navbar';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import Navbar from './components/Navbar';
+import Categories from './Pages/Categories';
+import BooksContainer from './Pages/BooksContainer';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <NavBar />
+const App = () => (
+  <BrowserRouter>
+    <div className="App">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Catagories" element={<Catagories />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/Books" element={<BooksContainer />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
-    </BrowserRouter>
-  );
-}
+    </div>
+  </BrowserRouter>
+);
 
 export default App;
