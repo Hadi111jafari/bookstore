@@ -1,11 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Bookstore
-> this project is build using React and redux that can do the following.
-
-- Display a list of books.
-- Add a book.
-- Remove a selected book.
+> The Online Book Store is a web application that displays a list of books, allows users to add and edit books by title or author, remove a selected book, and make comments.
 
 
 ## Built With
